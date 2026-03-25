@@ -5,7 +5,7 @@
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.x-orange)
 ![Streamlit](https://img.shields.io/badge/Streamlit-Web_App-red)
 ![YOLOv8](https://img.shields.io/badge/YOLOv8-Real--Time-green)
-![ResNet50](https://img.shields.io/badge/ResNet50-97.14%25_Accuracy-brightgreen)
+![ResNet50](https://img.shields.io/badge/ResNet50-94.54%25_Accuracy-brightgreen)
 
 ---
 
