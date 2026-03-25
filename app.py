@@ -74,7 +74,7 @@ def load_model():
         # Load trained weights
         if os.path.exists('cat_dog_model.pth'):
             model.load_state_dict(torch.load('cat_dog_model.pth', map_location=device))
-            st.success("✅ Loaded trained model (97% accuracy)")
+            st.success("✅ Loaded trained model (94% accuracy)")
         else:
             st.warning("⚠️ Trained model not found. Using pre-trained weights.")
             st.info("To save your model: torch.save(model.state_dict(), 'cat_dog_model.pth')")
@@ -255,7 +255,7 @@ with st.expander("ℹ️ Model Information"):
     
     **Training Dataset:** 275 images (138 cats, 137 dogs)
     
-    **Validation Accuracy:** 97.14% ⭐
+    **Validation Accuracy:** 94% ⭐
     
     **Training Time:** ~5-10 minutes
     
@@ -267,26 +267,7 @@ with st.expander("ℹ️ Model Information"):
     - Frozen: 23.5M (ImageNet features)
     """)
 
-with st.expander("🚀 For Interview"):
-    st.write("""
-    **Your Model Story:**
-    
-    "I built a CNN using ResNet50 transfer learning to classify cats and dogs. 
-    The model achieved 97.14% validation accuracy on 70 test images.
-    
-    Key points:
-    - Used transfer learning (ResNet50 pre-trained on ImageNet)
-    - Froze early layers to preserve learned features
-    - Fine-tuned only the last layer for cat/dog classification
-    - Trained for 10 epochs in just minutes
-    - Used 128×128 image size for efficiency
-    
-    This demonstrates understanding of:
-    - Deep learning fundamentals
-    - Transfer learning benefits
-    - Model optimization
-    - Ready for edge deployment on Jetson Nano"
-    """)
+
 
 # ============================================
 # Footer
@@ -295,6 +276,6 @@ st.markdown("---")
 st.markdown("""
 <div style="text-align: center; color: #666;">
     <p>🤖 Built with PyTorch & Streamlit</p>
-    <p><small>Model: ResNet50 | Accuracy: 97.14% | Training Data: 275 images</small></p>
+    <p><small>Model: ResNet50 | Accuracy: 94% | Training Data: 275 images</small></p>
 </div>
 """, unsafe_allow_html=True)

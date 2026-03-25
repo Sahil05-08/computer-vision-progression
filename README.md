@@ -5,7 +5,7 @@
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.x-orange)
 ![Streamlit](https://img.shields.io/badge/Streamlit-Web_App-red)
 ![YOLOv8](https://img.shields.io/badge/YOLOv8-Real--Time-green)
-![ResNet50](https://img.shields.io/badge/ResNet50-97.14%25_Accuracy-brightgreen)
+![ResNet50](https://img.shields.io/badge/ResNet50-94%25_Accuracy-brightgreen)
 
 ---
 
@@ -42,14 +42,14 @@ Used ResNet50 pretrained on ImageNet (1.2M images, 1000 classes). Froze all base
 **Results:**
 | Metric | Value |
 |---|---|
-| Validation Accuracy | **97.14%** |
+| Validation Accuracy | **94%** |
 | Training Loss | 0.66 → 0.15 (10 epochs) |
 | Total Parameters | 23.5 million |
 | Trainable Parameters | 4,098 (last layer only) |
 | Training Time | ~5–10 minutes on CPU |
 | Input Size | 128 × 128 pixels |
 
-**Learning:** Freezing 23.5M pretrained parameters and retraining only 4,098 achieves 97% accuracy on the same small dataset that the full CNN failed on. Pretrained features transfer directly.
+**Learning:** Freezing 23.5M pretrained parameters and retraining only 4,098 achieves 94% accuracy on the same small dataset that the full CNN failed on. Pretrained features transfer directly.
 
 **Tech:** PyTorch · torchvision · ResNet50 · ImageFolder · DataLoader
 
@@ -72,7 +72,7 @@ ResNet50 classifies a single image but cannot localize multiple objects or proce
 **Performance:**
 | Metric | Value |
 |---|---|
-| FPS on CPU | ~28 FPS |
+| FPS on CPU | ~~3 FPS |
 | Inference speed | ~340ms per frame |
 | Confidence threshold | 0.7 |
 | GPU required | No |
@@ -156,7 +156,7 @@ python detect.py
 | Diagnosing overfitting on small datasets | Stage 1 |
 | Transfer learning — freezing base layers | Stage 2 |
 | Fine-tuning final FC layer only | Stage 2 |
-| Achieving 97% accuracy with 275 images | Stage 2 |
+| Achieving 94% accuracy with 275 images | Stage 2 |
 | Real-time multi-object detection (YOLO) | Stage 3A |
 | Confidence thresholding to reduce false positives | Stage 3A |
 | FPS optimization on CPU | Stage 3A |
@@ -170,7 +170,7 @@ python detect.py
 
 **Stage 1 failed on purpose.** Understanding why a basic CNN fails on small data is more valuable than copying a model that works. The failure led directly to the transfer learning solution.
 
-**Stage 2 solves accuracy.** 97.14% on 275 images using only 4,098 trainable parameters proves that pretrained features are more powerful than raw data volume for small-scale tasks.
+**Stage 2 solves accuracy.** 94% on 275 images using only 4,098 trainable parameters proves that pretrained features are more powerful than raw data volume for small-scale tasks.
 
 **Stage 3A solves real-time.** Classification tells you *what* is in an image. Detection tells you *where* and handles multiple objects simultaneously — essential for any live camera application.
 
