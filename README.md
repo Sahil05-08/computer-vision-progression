@@ -42,7 +42,7 @@ Used ResNet50 pretrained on ImageNet (1.2M images, 1000 classes). Froze all base
 **Results:**
 | Metric | Value |
 |---|---|
-| Validation Accuracy | **97.14%** |
+| Validation Accuracy | **94.54%** |
 | Training Loss | 0.66 → 0.15 (10 epochs) |
 | Total Parameters | 23.5 million |
 | Trainable Parameters | 4,098 (last layer only) |
