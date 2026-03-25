@@ -72,7 +72,7 @@ ResNet50 classifies a single image but cannot localize multiple objects or proce
 **Performance:**
 | Metric | Value |
 |---|---|
-| FPS on CPU | ~28 FPS |
+| FPS on CPU | ~3 FPS |
 | Inference speed | ~340ms per frame |
 | Confidence threshold | 0.7 |
 | GPU required | No |
